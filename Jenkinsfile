@@ -3,7 +3,7 @@ pipeline {
     stages {
 	    stage('Build and Package') {           	
             steps {
-               script{              
+               withMaven {            
                 sh """
 		mvn package
                 """
