@@ -6,7 +6,7 @@ pipeline {
               withMaven(maven: 'maven-3.6.3') {           
 		 script{
 		    sh """
-		clean mvn package
+		     mvn clean package
                 """
 		 }}
             }
