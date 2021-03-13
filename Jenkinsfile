@@ -3,12 +3,12 @@ pipeline {
     stages {
 	    stage('Build and Package') {           	
             steps {
-              // withMaven {            
+              withMaven {            
 		 script{
 		    sh """
 		mvn package
                 """
-	       }
+		 }}
             }
         }
         stage('Ansible Deploy') {           	
