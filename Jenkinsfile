@@ -1,7 +1,7 @@
 pipeline {
     agent any   
     stages {
-	    stage('Ansible Integration') {           	
+	    stage('Build and Package') {           	
             steps {
                script{              
                 sh """
@@ -10,7 +10,7 @@ pipeline {
 	       }
             }
         }
-        stage('Ansible Integration') {           	
+        stage('Ansible Deploy') {           	
             steps {
                script{              
                 sh """
